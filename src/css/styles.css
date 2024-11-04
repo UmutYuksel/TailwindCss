@@ -625,8 +625,16 @@ a {
   left: 2.5rem;
 }
 
-.col-span-3 {
-  grid-column: span 3 / span 3;
+.left-5 {
+  left: 1.25rem;
+}
+
+.top-1 {
+  top: 0.25rem;
+}
+
+.top-5 {
+  top: 1.25rem;
 }
 
 .col-span-2 {
@@ -648,10 +656,6 @@ a {
 
 .mb-2 {
   margin-bottom: 0.5rem;
-}
-
-.mb-24 {
-  margin-bottom: 6rem;
 }
 
 .mb-8 {
@@ -743,12 +747,12 @@ a {
   cursor: pointer;
 }
 
-.grid-cols-6 {
-  grid-template-columns: repeat(6, minmax(0, 1fr));
-}
-
 .grid-cols-5 {
   grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.grid-cols-6 {
+  grid-template-columns: repeat(6, minmax(0, 1fr));
 }
 
 .flex-row {
@@ -791,6 +795,12 @@ a {
   gap: 0.5rem;
 }
 
+.space-x-1 > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-x-reverse: 0;
+  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
+  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
+}
+
 .space-x-2 > :not([hidden]) ~ :not([hidden]) {
   --tw-space-x-reverse: 0;
   margin-right: calc(0.5rem * var(--tw-space-x-reverse));
@@ -831,12 +841,6 @@ a {
   --tw-space-y-reverse: 0;
   margin-top: calc(2rem * calc(1 - var(--tw-space-y-reverse)));
   margin-bottom: calc(2rem * var(--tw-space-y-reverse));
-}
-
-.space-x-1 > :not([hidden]) ~ :not([hidden]) {
-  --tw-space-x-reverse: 0;
-  margin-right: calc(0.25rem * var(--tw-space-x-reverse));
-  margin-left: calc(0.25rem * calc(1 - var(--tw-space-x-reverse)));
 }
 
 .divide-x > :not([hidden]) ~ :not([hidden]) {
@@ -958,6 +962,16 @@ a {
   padding: 1rem;
 }
 
+.px-10 {
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+}
+
+.px-2 {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+
 .px-3 {
   padding-left: 0.75rem;
   padding-right: 0.75rem;
@@ -993,14 +1007,8 @@ a {
   padding-bottom: 1.5rem;
 }
 
-.px-10 {
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
-}
-
-.px-2 {
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
+.pb-8 {
+  padding-bottom: 2rem;
 }
 
 .pl-10 {
@@ -1023,30 +1031,6 @@ a {
   padding-right: 1rem;
 }
 
-.pb-8 {
-  padding-bottom: 2rem;
-}
-
-.pb-2 {
-  padding-bottom: 0.5rem;
-}
-
-.pb-3 {
-  padding-bottom: 0.75rem;
-}
-
-.pb-4 {
-  padding-bottom: 1rem;
-}
-
-.pb-10 {
-  padding-bottom: 2.5rem;
-}
-
-.pb-5 {
-  padding-bottom: 1.25rem;
-}
-
 .text-center {
   text-align: center;
 }
@@ -1057,6 +1041,11 @@ a {
 
 .font-open {
   font-family: Open Sans, serif;
+}
+
+.text-2xl {
+  font-size: 1.5rem;
+  line-height: 2rem;
 }
 
 .text-4xl {
@@ -1074,9 +1063,9 @@ a {
   line-height: 1rem;
 }
 
-.text-2xl {
-  font-size: 1.5rem;
-  line-height: 2rem;
+.text-lg {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
 }
 
 .font-bold {
@@ -1112,6 +1101,16 @@ a {
 
 .text-transparent {
   color: transparent;
+}
+
+.text-white {
+  --tw-text-opacity: 1;
+  color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+.text-black {
+  --tw-text-opacity: 1;
+  color: rgb(0 0 0 / var(--tw-text-opacity));
 }
 
 .opacity-0 {
@@ -1222,6 +1221,16 @@ a {
   opacity: 0.5;
 }
 
+.dark\:bg-black:is(.dark *) {
+  --tw-bg-opacity: 1;
+  background-color: rgb(0 0 0 / var(--tw-bg-opacity));
+}
+
+.dark\:text-gega-grey:is(.dark *) {
+  --tw-text-opacity: 1;
+  color: rgb(221 221 221 / var(--tw-text-opacity));
+}
+
 @media (min-width: 640px) {
   .sm\:h-16 {
     height: 4rem;
@@ -1286,12 +1295,12 @@ a {
     flex-direction: row;
   }
 
-  .md\:pl-0 {
-    padding-left: 0px;
-  }
-
   .md\:pb-0 {
     padding-bottom: 0px;
+  }
+
+  .md\:pl-0 {
+    padding-left: 0px;
   }
 
   .md\:text-lg {
@@ -1403,14 +1412,14 @@ a {
     margin-bottom: calc(0px * var(--tw-space-y-reverse));
   }
 
-  .lg\:py-12 {
-    padding-top: 3rem;
-    padding-bottom: 3rem;
-  }
-
   .lg\:px-0 {
     padding-left: 0px;
     padding-right: 0px;
+  }
+
+  .lg\:py-12 {
+    padding-top: 3rem;
+    padding-bottom: 3rem;
   }
 
   .lg\:pb-16 {
@@ -1419,6 +1428,11 @@ a {
 
   .lg\:pl-0 {
     padding-left: 0px;
+  }
+
+  .lg\:text-3xl {
+    font-size: 1.875rem;
+    line-height: 2.25rem;
   }
 
   .lg\:text-6xl {
@@ -1439,11 +1453,6 @@ a {
   .lg\:text-xl {
     font-size: 1.25rem;
     line-height: 1.75rem;
-  }
-
-  .lg\:text-3xl {
-    font-size: 1.875rem;
-    line-height: 2.25rem;
   }
 
   .group:hover .lg\:group-hover\:mb-20 {
